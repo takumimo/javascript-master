@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="widget.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="nowTime();">
+    <div class="top-wrapper">
+        <div class="wrapper">
+            <p>◯件のコメント</p>
+            <div class="sample">
+                <p>◯◯◯◯ より:</p> 
+                <p>サンプル</p> 
+            </div>
+            <div class="sample">
+                <p>◯◯◯◯ より:</p> 
+                <p>サンプル</p> 
+            </div>
+            <textarea id="span1" placeholder="新しいコメント"></textarea>
+            <p><strong>コメントを残す</strong></p>
+            <p>メールアドレスが公開されることはありません。</p>
+            <p><span>*</span>が付いている欄は必須項目です</p>
+            <!-- <form method="POST" action="example.cgi" name="form" onSubmit="return check()"> -->
+            コメント<span>*</span> <span id="comment-error-message"></span>
+            <form name="form1">
+            <textarea name="textarea1" id="comment" value="1" cols="50" rows=5 maxlength="15" placeholder="コメント"></textarea>
+            </form>
+            名前<span>*</span>
+            <form name="form2">
+                <textarea name="textarea2" value="2" cols="50" rows=5 maxlength="15" placeholder="名前"></textarea>
+            </form>
+            メールアドレス<span>*</span><span id="error-message"></span>
+            <form name="form3">
+                <textarea name="textarea3" id="mail" value="2" cols="50" rows=5 placeholder="メールアドレス"></textarea>
+            </form>
+            WEBサイト
+            <form name="form4">
+                <textarea name="textarea4" value="2" cols="50" rows=5 maxlength="15" placeholder="WEBサイト"></textarea>
+            </form>
+            <input type="button" value="コメントを送信" onclick="clickBtn1()"/>
+        </div>
+    </div>
+    <footer id="nowTime">
+    </footer>
+   
+
+    <script src="widget.js"></script>
+</body>
+</html>

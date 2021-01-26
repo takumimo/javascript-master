@@ -1,0 +1,53 @@
+body {
+    background-color: yellow;
+}
+
+.top-wrapper {
+    background-color: white;
+    width: 650px;
+    margin: auto;
+}
+
+.wrapper {
+    background-color: grey;
+    width: 600px;
+    margin: auto;
+}
+
+.comment-in {
+    height: 50px;
+    width: 100px;
+    background-color: white;
+}
+
+.asterisk {
+    color: red;
+}
+
+#span1 {
+    height: 100px;
+    width: 365px;
+}
+
+textarea {
+    resize: none;
+    margin-left: 80px;
+}
+
+p {
+    color: blue;
+}
+
+.sample {
+    background-color: green;
+    width: 365px;
+    margin-left: 80px;
+}
+
+input {
+    margin-left: 80px;
+}
+
+footer {
+    text-align: center;
+}
