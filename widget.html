@@ -19,20 +19,21 @@
                 <p class="subject">◯◯◯◯ より:</p> 
                 <p class="text">サンプル</p> 
             </div>
+
             <textarea id="span1" cols="50" rows=5 placeholder="新しいコメント"></textarea>
             <p><strong>コメントを残す</strong></p>
             <p>メールアドレスが公開されることはありません。</p>
-            <p><span>*</span>が付いている欄は必須項目です</p>
-            <!-- <form method="POST" action="example.cgi" name="form" onSubmit="return check()"> -->
-            <strong>コメント</strong> <span>*</span> <span id="comment-error-message"></span>
+            <p><span class="asterisk">*</span>が付いている欄は必須項目です</p>
+
+            <strong>コメント</strong> <span class="asterisk">*</span> <span id="comment-error-message"></span>
             <form name="form1">
-            <textarea name="textarea1" id="comment" value="1" cols="52" rows=5 placeholder="コメント"></textarea>
+                <textarea name="textarea1" id="comment" value="1" cols="52" rows=5 placeholder="コメント"></textarea>
             </form>
-            <strong>名前</strong> <span>*</span>
+            <strong>名前</strong> <span class="asterisk">*</span>
             <form name="form2">
                 <textarea class="placeholder" name="textarea2" value="2" cols="30" rows=1 maxlength="15" placeholder="名前"></textarea>
             </form>
-            <strong>メールアドレス</strong> <span>*</span><span id="error-message"></span>
+            <strong>メールアドレス</strong> <span class="asterisk">*</span><span id="error-message"></span>
             <form name="form3">
                 <textarea class="placeholder" name="textarea3" id="mail" value="2" cols="30" rows=1 placeholder="メールアドレス"></textarea>
             </form>
@@ -47,11 +48,11 @@
     <!-- <footer id="nowTime">
         
     </footer> -->
-    <p id="nowTime"></p>
+    
     <div id="snackbar_area">
-        
-        <p id="snackbar">ああああああああ</p>
-        <p id="snackbar2">お得に購入できる特設ページはこちら</p>
+        <p id="nowTime" class="snackbar"></p>
+        <p id="snackbar" class="snackbar"></p>
+        <p id="snackbar2" class="snackbar">お得に購入できる特設ページは<a id="link" class="blink" href="">こちら</a></p>
     </div>
     
 
