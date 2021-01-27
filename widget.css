@@ -48,7 +48,23 @@ body {
     border-top-color:#212121;
 }
 
+.asterisk {
+    color: red;
+}
 
+.blink {
+	-webkit-animation: blink 1.5s ease infinite;
+    animation: blink 1.5s ease infinite;
+    color: white;
+}
+@-webkit-keyframes blink {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes blink {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
 
 
 
@@ -91,34 +107,40 @@ textarea {
     padding: 10px;
 }
 
-span {
-    color: red;
-}
-
 .sample {
     background-color: white;
     padding: 5px 20px;
     margin-bottom: 30px;
 }
 
-/* footer {
+#nowTime {
     text-align: center;
-} */
+    background-color: #333;
+    color: white;
+    visibility: hidden; /* 最初は非表示 */
+    width: 100%;
+    height:20px;
+    background-color: #333;
+    text-align: center;
+    padding: 0px; 
+    position: fixed; 
+    z-index: 1;
+    bottom: -36px; /* 画面外にめり込ませておく */
+}
 
 #snackbar {
     visibility: hidden; /* 最初は非表示 */
     width: 100%;
     height:20px;
-    background-color: #333;
-    color: #fff; 
+    background-color: red;
     text-align: center;
     padding: 0px; 
     position: fixed; 
     z-index: 1;
     bottom: -36px; /* 画面外にめり込ませておく */
-  }
+}
 
-  #snackbar2 {
+#snackbar2 {
     visibility: hidden; /* 最初は非表示 */
     width: 100%;
     height:20px;
@@ -129,7 +151,7 @@ span {
     position: fixed; 
     z-index: 1;
     bottom: -36px; /* 画面外にめり込ませておく */
-  }
+}
   
   #snackbar_area {
       width: 100%;
@@ -139,12 +161,32 @@ span {
       bottom: 0px;
   }
 
-  #nowTime {
-    width: 100%;
-    height: 40px;
-    clip-path: inset(20px 0 0 0);
-    position: fixed; 
-    bottom: 0px;
+
+#nowTime.show {
+    visibility: visible;
+    animation: fadein 1s forwards, fadeout 1s 4s forwards; /*1秒でフェードイン、4秒後に1秒でフェードアウト*/
+    animation-iteration-count: 1; 
+    -webkit-animation: fadein 1s forwards, fadeout 1s 4s forwards; /* Safari & Chrome */
+    -webkit-animation-iteration-count: 1; 
+  }
+  @-webkit-keyframes fadein {
+     0%   { transform:  translateY(0px);    } 
+    100%  { transform:  translateY(-20px);   } 
+  }
+  
+  @keyframes fadein {
+     0%   { transform:  translateY(0px);    } 
+    100%  { transform:  translateY(-20px);   } 
+  }
+  
+  @-webkit-keyframes fadeout {
+     0%   { transform:  translateY(-20px);    } 
+    100%  { transform:  translateY(-40px);   } 
+  }
+  
+  @keyframes fadeout {
+     0%   { transform:  translateY(-20px);    } 
+    100%  { transform:  translateY(-40px);   } 
 }
   
   /* showクラスが付与されたときにアニメーションが起動する。 */
@@ -176,33 +218,6 @@ span {
   }
 
   #snackbar2.show {
-    visibility: visible;
-    animation: fadein 1s forwards, fadeout 1s 4s forwards; /*1秒でフェードイン、4秒後に1秒でフェードアウト*/
-    animation-iteration-count: 1; 
-    -webkit-animation: fadein 1s forwards, fadeout 1s 4s forwards; /* Safari & Chrome */
-    -webkit-animation-iteration-count: 1; 
-  }
-  @-webkit-keyframes fadein {
-     0%   { transform:  translateY(0px);    } 
-    100%  { transform:  translateY(-20px);   } 
-  }
-  
-  @keyframes fadein {
-     0%   { transform:  translateY(0px);    } 
-    100%  { transform:  translateY(-20px);   } 
-  }
-  
-  @-webkit-keyframes fadeout {
-     0%   { transform:  translateY(-20px);    } 
-    100%  { transform:  translateY(-40px);   } 
-  }
-  
-  @keyframes fadeout {
-     0%   { transform:  translateY(-20px);    } 
-    100%  { transform:  translateY(-40px);   } 
-  }
-
-  #nowTime.show {
     visibility: visible;
     animation: fadein 1s forwards, fadeout 1s 4s forwards; /*1秒でフェードイン、4秒後に1秒でフェードアウト*/
     animation-iteration-count: 1; 
