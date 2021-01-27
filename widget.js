@@ -47,19 +47,23 @@ function clickBtn1(){
 // const date1 = new Date();
 // const date2 = date1.getHours() + "時" + date1.getMinutes() + "分" + 
 // console.log(date2);
-const now = new Date();
+
+document.getElementById("nowTime").innerHTML = nowTime();
 function nowTime() {
-    const target = document.getElementById("nowTime");
+    const now = new Date();
     const random = Math.floor(Math.random() * 11);
     // let speed = 500;
     // const flag = 0;
     const Hour = now.getHours();
     const Min = now.getMinutes();
   
-    target.innerHTML = `${Hour}時${Min}分現在あなたの他に${random}人が見ています`;
+    let s = `${Hour}時${Min}分現在あなたの他に${random}人が見ています`;
+    return s;
   }
 
-const target = document.getElementById('nowTime');
+let target = document.getElementById('nowTime');
+let x = document.getElementById("snackbar");
+let y = document.getElementById("snackbar2");
 
 target.addEventListener('mouseover', () => {
   
@@ -158,51 +162,15 @@ target.addEventListener('mouseover', () => {
 
 //   CountdownTimer();
 
-target.innerHTML = "こんにちは"
+// const target = document.getElementById("nowTime");
+// target.className = "show";
+// target.innerHTML = "";
+x.className = "show";
 setTimeout(function() {
-    target.innerHTML = "お得に購入できる特設ページはこちら"
+    x.className = "";
+    y.className = "show";
+    // target.innerHTML = "お得に購入できる特設ページはこちら"
     // target.style.backgroundColor = white;
-
-//     (function (){
-//     var n=0;
-//     var speed=10;         //★原本100。流れる速度。数値が小さいほど速い。
-// var delay=2000;       //★文字列ごとのスライドの休止時間。1000=1秒
-
-// var tx=new Array();   //★文字列の指定。増減可能。１行目だけ全角スペース指定。文字列にタグも使用可能
-// tx[n++]=['　'];/*★★←１行目だけこのままで。全角スペース指定*/
-// tx[n++]=['縦にスクロールする、ニュースティッカーです。'];
-// tx[n++]=['表示ボックスの下からスライドインします。'];
-// tx[n++]=['前のテキストが上に スライドアウトしながら、'];
-// tx[n++]=['次のテキストが下から スライドインしてきます。'];
-// tx[n++]=['<span style="color:red;">動く文字 ティッカー 電光掲示板。色も変更できます。</span>'];
-// tx[n++]=['<a href="http://himajin.moo.jp/java/imgch/frame3.html" target="_new">リンク</a>も貼れます。原本はリンク先のJavaScriptです。'];
-
-// //指定はここまで-----------------------------------------------------------
-// var wh=Tbx.clientHeight;//ティッカーのborderを含まない縦幅
-// tx=tx.concat(tx);//配列を２倍連結。2倍しないと最後が空白になる
-// var len=tx.length;
-// var setwh=(wh*len)/2;
-// var flag_c=1,ps=0;
-// var sss="<div id='Tmass' style='position:absolute;'>";/*方向転換ができなくなるのでtopやleftの0指定はしない*/
-// for (var i=0; i<len; ++i) {
-// sss+="<div>"+tx[i]+"</div>";
-// }
-// sss+="</div>";
-// document.getElementById("Tbx").innerHTML=sss;
-// Tbx.onmouseover=function (){flag_c=2;}
-// Tbx.onmouseout=function (){flag_c=1;}
-// function ticKer(){
-// if(!flag_c){ if(ps >= 0){ps=-setwh;} ps+=1;}//小休止時に縦幅で割り切るために2を1へ変更
-// else if(flag_c===1){ if(ps <= -setwh){ps=0;} ps-=1;}//小休止時に縦幅で割り切るために2を1へ変更
-// Tmass.style.top=ps+"px";//leftをtopへ
-// var tm1=setTimeout(ticKer,speed);
-// if(ps%wh===0){clearTimeout(tm1); setTimeout(ticKer,delay);}
-// }
-// ticKer();
-// }());//即時関数終了
-// --></script>
-
-
 }, 6000);
 
 
