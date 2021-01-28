@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="widget.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript</title>
 </head>
 <body onload="nowTime();">
     <div class="top-wrapper">
@@ -23,31 +23,27 @@
             <textarea id="span1" cols="50" rows=5 placeholder="新しいコメント"></textarea>
             <p><strong>コメントを残す</strong></p>
             <p>メールアドレスが公開されることはありません。</p>
-            <p><span class="asterisk">*</span>が付いている欄は必須項目です</p>
+            <p><span class="asterisk">*</span> が付いている欄は必須項目です</p>
 
-            <strong>コメント</strong> <span class="asterisk">*</span> <span id="comment-error-message"></span>
+            <p><strong>コメント</strong> <span class="asterisk">*</span></p> <span id="comment-error-message1"></span>
             <form name="form1">
-                <textarea name="textarea1" id="comment" value="1" cols="52" rows=5 placeholder="コメント"></textarea>
-            </form>
-            <strong>名前</strong> <span class="asterisk">*</span>
-            <form name="form2">
-                <textarea class="placeholder" name="textarea2" value="2" cols="30" rows=1 maxlength="15" placeholder="名前"></textarea>
-            </form>
-            <strong>メールアドレス</strong> <span class="asterisk">*</span><span id="error-message"></span>
-            <form name="form3">
-                <textarea class="placeholder" name="textarea3" id="mail" value="2" cols="30" rows=1 placeholder="メールアドレス"></textarea>
-            </form>
-            <strong>WEBサイト</strong> 
-            <form name="form4">
+                    <textarea name="textarea1" id="comment" value="1" cols="52" rows=5 placeholder="コメント"></textarea>
+
+                <p><strong>名前 <span class="asterisk">*</span></strong></p>  <span id="comment-error-message2"></span>
+
+                    <textarea class="placeholder" name="textarea2" value="2" cols="30" rows=1 maxlength="15" placeholder="名前"></textarea>
+
+                <p><strong>メールアドレス <span class="asterisk">*</span></strong></p><span id="comment-error-message3"></span><br /><span id="comment-error-message4"></span><br />
+
+                    <textarea class="placeholder" name="textarea3" id="mail" value="2" cols="30" rows=1 placeholder="メールアドレス"></textarea>
+
+                <p><strong>WEBサイト</strong></p>
+
                 <textarea class="placeholder" name="textarea4" value="2" cols="30" rows=1 placeholder="WEBサイト"></textarea>
             </form>
             <input type="button" value="コメントを送信" onclick="clickBtn1()"/>
         </div>
     </div>
-    
-    <!-- <footer id="nowTime">
-        
-    </footer> -->
     
     <div id="snackbar_area">
         <p id="nowTime" class="snackbar"></p>
@@ -55,7 +51,6 @@
         <p id="snackbar2" class="snackbar">お得に購入できる特設ページは<a id="link" class="blink" href="">こちら</a></p>
     </div>
     
-
     <script src="widget.js"></script>
 </body>
 </html>
